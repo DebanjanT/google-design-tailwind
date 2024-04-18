@@ -33,7 +33,11 @@ const page = () => {
             <p className="text-lg mb-1">Colors</p>
             <div className="flex justify-start items-center gap-2">
               {colors?.map((color, index) => (
-                <ColorBlock color={color.color} variable={color.variable} />
+                <ColorBlock
+                  color={color.color}
+                  variable={color.variable}
+                  key={color.variable}
+                />
               ))}
             </div>
           </div>

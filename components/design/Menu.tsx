@@ -1,3 +1,4 @@
+"use client";
 import { Menu, Transition } from "@headlessui/react";
 import { ArrowBigDown, ChevronDown } from "lucide-react";
 import { Fragment, JSX, SVGProps, useEffect, useRef, useState } from "react";
