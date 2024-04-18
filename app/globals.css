@@ -1,17 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --subtle-btn-text: #1565cf;
-}
-
 @layer base {
-  body {
-    @apply bg-backgorundSurface font-productSans;
+  :root {
+    --background-surface: #f2f3f5;
+    --border-color: #0000001f;
+    --primary: #1565cf;
+    --on-primary: #ffffff;
+    --subtle-surface: #1a73e8;
+    --subtle-btn-text: #1565cf;
+    --subtle-btn-surface: #1a73e81a;
+    --subtle-btn-hover-surface: #1a73e825;
   }
 
-  button {
-    @apply disabled:bg-[#00000008] disabled:text-[#00000061] disabled:cursor-not-allowed disabled:border-transparent;
+  body {
+    @apply relative bg-backgorundSurface font-productSans;
+  }
+}
+
+@layer components {
+  .btn__root {
+    @apply tracking-wider p-[1px_24px] border-[1px] inline-block box-border rounded-full text-sm  min-h-[24px] active:scale-[98%] hover:shadow-1 disabled:hover:bg-[#00000008] disabled:shadow-none disabled:active:scale-100 disabled:bg-[#00000008] disabled:text-[#00000061] disabled:cursor-not-allowed disabled:border-transparent transition-shadow duration-200 ease-in-out flex justify-center items-center gap-1;
+  }
+  .btn-subtle {
+    @apply btn__root bg-subtleBtnSurface text-subtleBtnText border-transparent;
+  }
+  .btn-outlined {
+    @apply btn__root bg-transparent text-outlineBtnText border-borderColor;
+  }
+  .btn-contained {
+    @apply btn__root bg-primary text-onPrimary border-transparent;
+  }
+  .btn-gradient {
+    @apply btn__root bg-gradient-to-b from-primary to-subtleSurface text-onPrimary border-transparent;
+  }
+  .btn-text {
+    @apply btn__root bg-transparent text-primary border-transparent;
+  }
+  .font-roboto {
+    font-family: "Roboto", sans-serif;
   }
 }

@@ -5,7 +5,6 @@ interface ICB {
   variable?: string;
 }
 const ColorBlock = ({ color, variable }: ICB) => {
-  const clr = "bg-" + `[${color}]`;
   return (
     <div className="flex justify-start items-center gap-1">
       <div
@@ -13,12 +12,10 @@ const ColorBlock = ({ color, variable }: ICB) => {
         style={{
           backgroundColor: color,
         }}
-      />
+      ></div>
       <div className="flex flex-col justify-start items-start">
-        <span className="text-slate-700">{variable ? variable : "N/A"}</span>
-        <span className="text-inactiveText text-sm">
-          {color ? color : "N/A"}
-        </span>
+        <p className="text-slate-700">{variable ? variable : "N/A"}</p>
+        <p className="text-inactiveText text-sm">{color ? color : "N/A"}</p>
       </div>
     </div>
   );
