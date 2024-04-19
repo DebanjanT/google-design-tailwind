@@ -8,6 +8,8 @@
     --background-surface: #f2f3f5;
     --border-color: #0000001f;
     --primary: #1565cf;
+    --triadic-primary: #cf1565;
+    --triadic-secondary: #65cf15;
     --on-primary: #ffffff;
     --subtle-surface: #1a73e8;
     --subtle-btn-text: #1565cf;
@@ -38,6 +40,9 @@
   }
   .btn-text {
     @apply btn__root bg-transparent text-primary border-transparent;
+  }
+  .btn-link {
+    @apply btn__root px-2 py-0 hover:shadow-none hover:underline disabled:bg-transparent disabled:hover:bg-transparent disabled:hover:no-underline h-auto bg-transparent text-primary border-transparent;
   }
   .font-roboto {
     font-family: "Roboto", sans-serif;

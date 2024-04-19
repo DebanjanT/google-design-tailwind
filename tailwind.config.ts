@@ -41,6 +41,8 @@ const config: Config = {
         backgorundSurface: "var(--background-surface)",
         borderColor: "var(--border-color)",
         primary: "var(--primary)",
+        triadicPrimary: "var(--triadic-primary)",
+        triadicsecondary: "var(--triadic-secondary)",
         onPrimary: "var(--on-primary)",
         subtleSurface: "var(--subtle-surface)",
         subtleBtnSurface: "var(--subtle-btn-surface)",
